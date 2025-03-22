@@ -1,0 +1,42 @@
+.logo{
+  height: 50px;
+  width: 100px;
+}
+
+.header{
+  margin-bottom: 70px;
+}
+
+.hero{
+  display: flex;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.hero h1{
+  font-weight: 800px;
+  font-size: 108px;
+  line-height: 102px;
+}
+
+.hero p{
+  font-weight: 600px;
+  color: grey;
+  width: 800px;
+}
+
+.shop{
+  margin: 7px;
+}
+
+.heroContent{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.image{
+  height: 525px;
+  border-radius: 150px;
+}
+
