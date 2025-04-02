@@ -1,0 +1,13 @@
+.contactSection h3{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.contactSection p{
+    font-weight: 400;
+}
+
+.container{
+    max-width: 850px;
+    margin: 0 auto;
+}
