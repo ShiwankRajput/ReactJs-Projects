@@ -7,7 +7,9 @@
 
 body{
     height: 100vh;
-    background-image: linear-gradient(50deg,#9FB3DF,#FFF1D5);
+    /* background-image: linear-gradient(50deg,#9FB3DF,#FFF1D5); */
+    background-image: linear-gradient(50deg,#496cb8,#c2a15e);
+
     font-family: "poppins";
     display: flex;
     flex-direction: column;

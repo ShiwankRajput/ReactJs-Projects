@@ -1,10 +1,11 @@
 .container{
     width: 640px;
+    height: 560px;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: white;
     color: #262626;
     padding: 40px 50px;
@@ -54,4 +55,8 @@
 .index{
     margin: auto;
     font-size: 18px;
+}
+
+.scored{
+    color: red;
 }
