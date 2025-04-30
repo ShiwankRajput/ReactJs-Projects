@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter} from 'react-router-dom';
 import './index.css'
 import App from './App.jsx'
-import Shop from './components/Shop.jsx'
-import ShopCategory from './components/ShopCategory.jsx'
-import Product from './components/Product.jsx'
-import Cart from './components/Cart.jsx'
-import LoginSignUp from './components/LoginSignUp.jsx'
+import Shop from './Pages/Shop.jsx'
+import ShopCategory from './Pages/ShopCategory.jsx'
+import Product from './Pages/Product.jsx'
+import Cart from './Pages/Cart.jsx'
+import LoginSignUp from './Pages/LoginSignUp.jsx'
 
 
 

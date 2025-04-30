@@ -1,12 +1,12 @@
 import React from 'react'
-import Hero from './HeroSection/Hero'
-import { Outlet } from 'react-router-dom';
+import Hero from '../components/HeroSection/Hero'
+import Popular from '../components/Popular/Popular'
 
 const Shop = () => {
   return (
     <div>
       <Hero/>
-      <Outlet/>
+      <Popular/>
     </div>
   )
 }
