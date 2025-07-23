@@ -1,30 +1,56 @@
-import { useState } from "react";
-import css from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+import css from './Navbar.module.css';
+import cart_icon from '../../assets/cart_icon.png';
+import clothing2_icon from '../../assets/clothing2_icon.png';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaSearch, FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
-
-  const [menu, setMenu] = useState("shop");
+  const [menu, setMenu] = useState('');
 
   return (
     <div className={css.navbar}>
-      <div className={css.navLogo}>
-        <img src="/images/logo.png" alt="logo" />
-        <p>SHOPPER</p>
+      <div className={css.navbarLogo}>
+        <img src={clothing2_icon} alt="Store Logo" className={css.clothImg} />
       </div>
+
       <ul className={css.navMenu}>
-        <li onClick={()=>setMenu("shop")}><Link style={{textDecoration: 'none'}} to="/">Shop</Link> {menu === "shop" ? <hr/> : <></>}</li>
-        <li onClick={()=>setMenu("mens")}><Link style={{textDecoration: 'none'}} to="/mens">Men</Link> {menu === "mens" ? <hr/> : <></>}</li>
-        <li onClick={()=>setMenu("womens")}><Link style={{textDecoration: 'none'}} to="/womens">Women</Link> {menu === "womens" ? <hr/> : <></>}</li>
-        <li onClick={()=>setMenu("kids")}><Link style={{textDecoration: 'none'}} to="/kids">Kids</Link> {menu === "kids" ? <hr/> : <></>}</li>
+        <li onClick={() => setMenu('shop')}>
+          <Link to="/" className={css.navLink}>Shop</Link>
+          {menu === 'shop' && <hr className={css.activeHr} />}
+        </li>
+        <li onClick={() => setMenu('Men')}>
+          <Link to="/men" className={css.navLink}>Men</Link>
+          {menu === 'Men' && <hr className={css.activeHr} />}
+        </li>
+        <li onClick={() => setMenu('Women')}>
+          <Link to="/women" className={css.navLink}>Women</Link>
+          {menu === 'Women' && <hr className={css.activeHr} />}
+        </li>
+        <li onClick={() => setMenu('Kids')}>
+          <Link to="/kids" className={css.navLink}>Kids</Link>
+          {menu === 'Kids' && <hr className={css.activeHr} />}
+        </li>
       </ul>
+
+      <div className={css.navSearch}>
+        <input type="text" placeholder="Search..." />
+        <button>
+          <FaSearch size={18} />
+        </button>
+      </div>
+
       <div className={css.navLoginCart}>
-        <Link style={{textDecoration: 'none'}} to="/login"><button>Login</button></Link>
-        <Link style={{textDecoration: 'none'}} to="/cart"><img src="/images/cart_icon.png" alt="" /></Link>
-        <div className={css.navCartCount}>0</div>
+        <Link to="/login" className={css.loginIcon}>
+          <FaUser size={20} />
+        </Link>
+        <Link to="/cart" className={css.cartContainer}>
+          <img src={cart_icon} alt="Cart" className={css.cartIcon} />
+          <span className={css.cartCount}>0</span>
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

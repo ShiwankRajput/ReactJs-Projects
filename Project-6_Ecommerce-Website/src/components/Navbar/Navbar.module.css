@@ -1,77 +1,220 @@
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    box-shadow: 0px 1px 3px -2px black;
-    padding-top: 15px;
-    padding-bottom: 15px;
+/* Navbar.module.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.navLogo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.navbarLogo {
+  display: flex;
+  align-items: center;
 }
 
-.navLogo p{
-    color: #171717;
-    font-size: 35px;
-    font-weight: 400;
+.clothImg {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.navMenu{
-    display: flex;
-    list-style-type: none;
-    gap: 50px;
-    align-items: center;
-    color: #626262;
-    font-size: 18px;
-    font-weight: 500;
+.clothImg:hover {
+  transform: scale(1.1);
 }
 
-.navMenu li{
-    cursor: pointer;
+.navMenu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-.navMenu hr{
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background: #FF4141;
+.navMenu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
-.navLoginCart{
-    display: flex;
-    align-items: center;
-    gap: 45px;
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
 }
 
-.navLoginCart button{
-    height: 40px;
-    width: 100px;
-    border-radius: 75px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    background: white;
-    outline: none;
-    border: 1px solid #7a7a7a;
+.navLink:hover {
+  color: #ff4757;
 }
 
-.navLoginCart button:active{
-    background-color: #f3f3f3;
+.activeHr {
+  border: none;
+  height: 3px;
+  width: 80%;
+  background: #ff4757;
+  margin-top: 5px;
 }
 
-.navCartCount{
-    width: 22px;
-    height: 22px;
-    display: flex;
+.navSearch {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: 25%;
+  transition: all 0.3s ease;
+}
+
+.navSearch:hover {
+  background: #e9e9e9;
+}
+
+.navSearch input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 0.3rem;
+  outline: none;
+}
+
+.navSearch button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  transition: transform 0.2s ease;
+}
+
+.navSearch button:hover {
+  transform: scale(1.1);
+}
+
+.navLoginCart {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loginIcon {
+  color: #333;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginIcon:hover {
+  color: #ff4757;
+  transform: scale(1.1);
+}
+
+.cartContainer {
+  position: relative;
+  display: flex;
+}
+
+.cartIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.cartContainer:hover .cartIcon {
+  transform: scale(1.1);
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4757;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Responsive Styles - Modified for more compact mobile navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .navMenu {
+    order: 3;
+    width: 100%;
     justify-content: center;
-    align-items: center;
-    margin-top: -35px;
-    margin-left: -55px;
-    border-radius: 11px;
-    font-size: 15px;
-    background-color: red;
-    color: wheat;
+    gap: 0.8rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid #eee;
+  }
+
+  .navSearch {
+    order: 2;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .navLoginCart {
+    order: 1;
+    margin-left: auto;
+    gap: 1rem;
+  }
+
+  .clothImg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .navMenu {
+    font-size: 0.85rem;
+    gap: 0.6rem;
+    padding: 0.4rem 0;
+  }
+
+  .navSearch {
+    width: 100%;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .loginIcon, .cartIcon {
+    transform: scale(0.85);
+  }
+
+  .clothImg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navLink {
+    padding: 0.3rem 0;
+  }
+
+  .cartCount {
+    width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
+  }
 }
