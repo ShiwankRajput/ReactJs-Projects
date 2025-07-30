@@ -1,0 +1,151 @@
+/* Footer.module.css */
+
+.footer {
+  background: linear-gradient(135deg, #fefefe 0%, #f5f5f5 100%);
+  color: #555;
+  padding: 3rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footerLogo {
+  width: 160px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.footerLogo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0.9);
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footerLinks li {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.footerLinks li:hover {
+  color: #ff7b00;
+  transform: translateY(-1px);
+}
+
+.footerSocialIcons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footerIconContainer {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffe5cc; /* Light orange background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.footerIconContainer:hover {
+  background: #ffd1a3; /* Slightly darker orange on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.15);
+}
+
+.footerIconContainer img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.9;
+  filter: brightness(0.7); /* Slightly darker icons for contrast */
+}
+
+.footerCopyright {
+  width: 100%;
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footerCopyright p {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .footerLinks {
+    gap: 1.2rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.8rem 1rem;
+    gap: 1.2rem;
+  }
+  .footerLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .footerLogo {
+    width: 140px;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background: linear-gradient(135deg, #222 0%, #2a2a2a 100%);
+    color: #ddd;
+    border-top-color: rgba(255, 255, 255, 0.05);
+  }
+  .footerLinks li {
+    color: #ccc;
+  }
+  .footerLinks li:hover {
+    color: #ff9a3c;
+  }
+  .footerIconContainer {
+    background: #c7854b; /* Darker orange-brown for dark mode */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  .footerIconContainer:hover {
+    background: #4a3724; /* Slightly lighter on hover */
+  }
+  .footerIconContainer img {
+    filter: brightness(1.1);
+  }
+  .footerCopyright {
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+  .footerCopyright p {
+    color: #aaa;
+  }
+}
