@@ -1,0 +1,109 @@
+/* DescriptionBox.module.css */
+
+.descriptionBox {
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.descriptionBoxNavigator {
+  display: flex;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.descriptionBoxNavBox {
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+  flex: 1;
+}
+
+.descriptionBoxNavBox:hover {
+  color: #212529;
+  background-color: #e9ecef;
+}
+
+.descriptionBoxNavBox:first-child {
+  border-top-left-radius: 12px;
+}
+
+.descriptionBoxNavBox:last-child {
+  border-top-right-radius: 12px;
+}
+
+.descriptionBoxNavBox.active {
+  color: #0d6efd;
+  background-color: white;
+}
+
+.descriptionBoxNavBox.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0d6efd;
+}
+
+.descriptionBoxDescription {
+  padding: 2rem;
+  background-color: white;
+  line-height: 1.7;
+  color: #212529;
+}
+
+.descriptionBoxDescription p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .descriptionBox {
+    margin: 1rem;
+    border-radius: 8px;
+  }
+  
+  .descriptionBoxNavBox {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .descriptionBoxDescription {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .descriptionBoxNavigator {
+    flex-direction: column;
+  }
+  
+  .descriptionBoxNavBox {
+    padding: 0.8rem;
+    border-radius: 0 !important;
+  }
+  
+  .descriptionBoxNavBox.active::after {
+    display: none;
+  }
+  
+  .descriptionBoxDescription {
+    padding: 1rem;
+  }
+  
+  .descriptionBoxDescription p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}

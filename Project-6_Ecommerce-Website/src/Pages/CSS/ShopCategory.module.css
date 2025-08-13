@@ -1,0 +1,121 @@
+/* ShopCategory.module.css */
+
+/* ---------- Base Container ---------- */
+.shopCategory {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* ---------- Banner Image ---------- */
+.shopCategoryBanner {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Top Row (Index & Sort) ---------- */
+.shopCategoryIndexSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.shopCategoryIndexSort p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+/* ---------- Sort Button ---------- */
+.shopCategorySort {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #f7f7f7;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.shopCategorySort:hover {
+  background-color: #ececec;
+  transform: scale(1.03);
+}
+
+.shopCategorySort img {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Product Grid ---------- */
+.shopCategoryProduct {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 2rem;
+}
+
+/* ---------- Load More Button ---------- */
+.shopCategoryLoadMore {
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+  background: linear-gradient(90deg, #ff6b6b, #f06595);
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+  transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+.shopCategoryLoadMore:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #f06595, #d6336c);
+}
+
+/* ---------- Responsive Design ---------- */
+
+/* Mobile (small devices) */
+@media (max-width: 576px) {
+  .shopCategoryIndexSort {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .shopCategoryProduct {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .shopCategorySort {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+  .shopCategoryProduct {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop & Large Screens */
+@media (min-width: 993px) {
+  .shopCategoryProduct {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

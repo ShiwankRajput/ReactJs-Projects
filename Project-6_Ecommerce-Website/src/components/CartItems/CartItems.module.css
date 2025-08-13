@@ -1,0 +1,251 @@
+/* CartItems.module.css */
+
+.cartItems {
+  margin: 2rem auto;
+  max-width: 1200px;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  padding: 0 1rem;
+}
+
+/* Header Row Styles */
+.cartItemsFormatMain {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  font-weight: 600;
+  color: #212529;
+  font-size: 1.1rem;
+}
+
+/* Product Row Styles */
+.cartItemsFormat {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.cartItemsFormat:hover {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.cartIconProductIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  padding: 5px;
+}
+
+.cartItemsQuantity {
+  width: 50px;
+  height: 40px;
+  border: 1px solid #e9ecef;
+  background-color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cartItemsQuantity:hover {
+  background-color: #f8f9fa;
+}
+
+.cartItems hr {
+  border: none;
+  height: 1px;
+  background-color: #e9ecef;
+  margin: 0;
+}
+
+/* Remove Icon */
+.cartItems img[src*="cart_cross_icon"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-self: center;
+}
+
+.cartItems img[src*="cart_cross_icon"]:hover {
+  transform: scale(1.2);
+}
+
+/* Cart Total Section */
+.cartItemsDown {
+  display: flex;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.cartItemsTotal {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.cartItemsTotal h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #212529;
+}
+
+.cartItemTotalItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.cartItemTotalItem p {
+  color: #495057;
+}
+
+.cartItemTotalItem h3 {
+  font-size: 1.2rem;
+  color: #212529;
+}
+
+.cartItemsTotal button {
+  width: 100%;
+  padding: 1rem;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.cartItemsTotal button:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Promo Code Section */
+.cartItemsPromoCode {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.cartItemsPromoCode p {
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.cartItemPromoBox {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cartItemPromoBox input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.cartItemPromoBox input:focus {
+  border-color: #0d6efd;
+}
+
+.cartItemPromoBox button {
+  padding: 0 1.5rem;
+  background: #212529;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cartItemPromoBox button:hover {
+  background: #495057;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .cartItemsFormatMain,
+  .cartItemsFormat {
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  }
+  
+  .cartItemsFormatMain p:nth-child(1),
+  .cartItemsFormat img {
+    display: none;
+  }
+  
+  .cartItemsDown {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .cartItemsFormatMain,
+  .cartItemsFormat {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    font-size: 0.9rem;
+  }
+  
+  .cartItemsFormatMain p:nth-child(3),
+  .cartItemsFormat p:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .cartItems {
+    padding: 0 0.5rem;
+  }
+  
+  .cartItemsFormatMain,
+  .cartItemsFormat {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  .cartItemsFormatMain p:nth-child(5),
+  .cartItemsFormat p:nth-child(5) {
+    display: none;
+  }
+  
+  .cartItemsQuantity {
+    width: 40px;
+    height: 30px;
+  }
+  
+  .cartItemsTotal,
+  .cartItemsPromoCode {
+    padding: 1rem;
+  }
+  
+  .cartItemPromoBox {
+    flex-direction: column;
+  }
+  
+  .cartItemPromoBox button {
+    padding: 0.8rem;
+  }
+}
