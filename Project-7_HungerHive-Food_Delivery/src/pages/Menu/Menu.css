@@ -1,0 +1,234 @@
+/* src/pages/Menu/Menu.css */
+.menu-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.menu-hero {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 80px 0;
+  text-align: center;
+  margin-bottom: 60px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #4f46e5, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+.special-tags {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.tag.veg {
+  background-color: #10b98120;
+  color: #10b981;
+  border: 1px solid #10b98140;
+}
+
+.tag.dessert {
+  background-color: #f59e0b20;
+  color: #b45309;
+  border: 1px solid #f59e0b40;
+}
+
+.tag.pasta {
+  background-color: #6366f120;
+  color: #4f46e5;
+  border: 1px solid #6366f140;
+}
+
+/* Menu List */
+.menu-list {
+  padding-bottom: 60px;
+}
+
+.menu-category {
+  margin-bottom: 50px;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-icon {
+  font-size: 1.5rem;
+}
+
+.veg-badge {
+  background-color: #10b98120;
+  color: #10b981;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.category-divider {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(90deg, #4f46e5, #10b981);
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+.food-items {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.food-item {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.food-info {
+  flex: 1;
+}
+
+.food-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+}
+
+.food-description {
+  font-size: 0.95rem;
+  color: #718096;
+  margin: 0 0 8px 0;
+  line-height: 1.5;
+}
+
+.veg-indicator {
+  font-size: 0.8rem;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.food-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+/* Special category highlights */
+.menu-category[data-category="Dessert"] .category-title {
+  color: #b45309;
+}
+
+.menu-category[data-category="Pure Veg"] .category-title {
+  color: #10b981;
+}
+
+.menu-category[data-category="Pasta"] .category-title {
+  color: #4f46e5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtext {
+    font-size: 1rem;
+  }
+  
+  .food-items {
+    grid-template-columns: 1fr;
+  }
+  
+  .food-item {
+    padding: 20px;
+  }
+
+  .special-tags {
+    gap: 10px;
+  }
+
+  .tag {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  gap: 4px;
+  flex: 1;
+    min-width: 120px;
+    justify-content: center;
+  }
+}
